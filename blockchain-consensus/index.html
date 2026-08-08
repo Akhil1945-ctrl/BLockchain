@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consensus Algorithms in Blockchain — A Comparative Explorer</title>
+    <meta name="description" content="An interactive educational explorer comparing all major blockchain consensus algorithms across scalability, security, decentralization, smart contract support, layer classification, and cross-chain compatibility.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ============ PARTICLE CANVAS BACKGROUND ============ -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- ============ HERO SECTION ============ -->
+    <header id="hero">
+        <div class="hero-content">
+            <p class="hero-tag">⛓️ Blockchain Education</p>
+            <h1 class="hero-title">Consensus Algorithms<br><span class="gradient-text">A Comparative Explorer</span></h1>
+            <p class="hero-subtitle">Dive deep into how blockchains agree — explore every major consensus mechanism, their trilemma trade-offs, real-world usage, smart contract languages, layer classification, and cross-chain compatibility.</p>
+            <a href="#filter-bar" class="hero-cta">Start Exploring ↓</a>
+        </div>
+    </header>
+
+    <!-- ============ INTRO: WHAT IS CONSENSUS? ============ -->
+    <section id="what-is-consensus" class="section reveal">
+        <div class="container">
+            <h2 class="section-title">What is <span class="gradient-text">Consensus</span>?</h2>
+            <div class="intro-grid">
+                <div class="intro-card glass-card">
+                    <div class="intro-icon">🤝</div>
+                    <h3>Agreement Protocol</h3>
+                    <p>A consensus algorithm is a mechanism through which all participants (nodes) in a blockchain network agree on the current state of the distributed ledger — without needing a central authority.</p>
+                </div>
+                <div class="intro-card glass-card">
+                    <div class="intro-icon">🔒</div>
+                    <h3>Immutability</h3>
+                    <p>Once data is committed to the blockchain via consensus, it becomes practically impossible to alter. Each block is cryptographically linked to the previous, creating a tamper-proof chain of records.</p>
+                </div>
+                <div class="intro-card glass-card">
+                    <div class="intro-icon">👁️</div>
+                    <h3>Transparency</h3>
+                    <p>All transactions validated through consensus are visible to every participant in the network, ensuring complete transparency while maintaining the integrity of the system.</p>
+                </div>
+                <div class="intro-card glass-card">
+                    <div class="intro-icon">📈</div>
+                    <h3>Scalability</h3>
+                    <p>Different consensus algorithms offer different trade-offs in transaction throughput (TPS), block creation time, and network capacity — a key factor in blockchain design.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ BLOCKCHAIN TRILEMMA EXPLAINER ============ -->
+    <section id="trilemma-explainer" class="section reveal">
+        <div class="container">
+            <h2 class="section-title">The Blockchain <span class="gradient-text">Trilemma</span></h2>
+            <p class="section-desc">Every blockchain must balance three competing properties. No algorithm perfectly maximises all three — each makes trade-offs.</p>
+            <div class="trilemma-visual">
+                <div class="trilemma-pillar glass-card">
+                    <div class="pillar-icon">⚡</div>
+                    <h3>Scalability</h3>
+                    <p>The ability to handle a large number of transactions per second (TPS) with fast block creation times. High scalability means the network can grow without choking.</p>
+                </div>
+                <div class="trilemma-pillar glass-card">
+                    <div class="pillar-icon">🛡️</div>
+                    <h3>Security</h3>
+                    <p>Resistance to attacks such as 51% attacks, Sybil attacks, and double-spending. A secure network ensures that no single entity can manipulate the ledger.</p>
+                </div>
+                <div class="trilemma-pillar glass-card">
+                    <div class="pillar-icon">🌐</div>
+                    <h3>Decentralisation</h3>
+                    <p>The degree to which the network is distributed across independent nodes. Higher decentralisation means no single point of failure or control.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FILTER BAR ============ -->
+    <section id="filter-bar" class="section">
+        <div class="container">
+            <h2 class="section-title">Explore by <span class="gradient-text">Algorithm</span></h2>
+            <p class="section-desc">Click any algorithm below to filter all panels simultaneously, or click "Show All" to see everything.</p>
+            <div id="filterChips" class="filter-chips">
+                <!-- Chips injected by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ ALGORITHM OVERVIEW ============ -->
+    <section id="algorithm-overview" class="section reveal">
+        <div class="container">
+            <h2 class="section-title">Algorithm <span class="gradient-text">Overview</span></h2>
+            <p class="section-desc">Core mechanism and step-by-step explanation of how each consensus algorithm works in plain language.</p>
+            <div id="overviewCards" class="overview-grid">
+                <!-- Cards injected by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ TRILEMMA RADAR CHARTS ============ -->
+    <section id="trilemma-charts" class="section reveal">
+        <div class="container">
+            <h2 class="section-title">Trilemma <span class="gradient-text">Analysis</span></h2>
+            <p class="section-desc">Radar charts showing how each algorithm balances Scalability, Security, and Decentralisation (rated 1–10).</p>
+            <div id="radarCharts" class="radar-grid">
+                <!-- Canvas charts injected by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ REAL-WORLD MAPPING ============ -->
+    <section id="real-world" class="section reveal">
+        <div class="container">
+            <h2 class="section-title">Real-World <span class="gradient-text">Blockchain Mapping</span></h2>
+            <p class="section-desc">Which blockchains and cryptocurrencies use each algorithm, and why that algorithm suits their design goals.</p>
+            <div id="mappingCards" class="mapping-grid">
+                <!-- Cards injected by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SMART CONTRACT LANGUAGES ============ -->
+    <section id="smart-contracts" class="section reveal">
+        <div class="container">
+            <h2 class="section-title">Smart Contract <span class="gradient-text">Languages</span></h2>
+            <p class="section-desc">The programming languages used to write smart contracts on each blockchain, explicitly tied to the consensus protocol.</p>
+            <div id="languageCards" class="language-grid">
+                <!-- Cards injected by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ LAYER CLASSIFICATION ============ -->
+    <section id="layers" class="section reveal">
+        <div class="container">
+            <h2 class="section-title">Layer <span class="gradient-text">Classification</span></h2>
+            <p class="section-desc">Whether each blockchain operates at Layer 1 (the base chain) or Layer 2 (a scaling solution built on top of a base chain).</p>
+            <div class="layer-explanation">
+                <div class="layer-box glass-card">
+                    <span class="layer-badge l1">L1</span>
+                    <h3>Layer 1 — Base Chain</h3>
+                    <p>The foundational blockchain network that processes and finalises transactions on its own. It has its own consensus mechanism, native token, and independent security model. Examples: Bitcoin, Ethereum, Solana.</p>
+                </div>
+                <div class="layer-box glass-card">
+                    <span class="layer-badge l2">L2</span>
+                    <h3>Layer 2 — Scaling Solution</h3>
+                    <p>A secondary framework built on top of a Layer 1 chain to improve its scalability. L2 solutions process transactions off-chain and periodically settle on the base chain for security. Examples: Lightning Network (Bitcoin), Polygon, Arbitrum.</p>
+                </div>
+            </div>
+            <div id="layerCards" class="layer-grid">
+                <!-- Cards injected by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CRYPTOCURRENCY VARIANTS ============ -->
+    <section id="crypto-variants" class="section reveal">
+        <div class="container">
+            <h2 class="section-title">Cryptocurrency <span class="gradient-text">Variants</span></h2>
+            <p class="section-desc">Major cryptocurrencies grouped by their consensus algorithm — showing the diversity of digital assets across different consensus families.</p>
+            <div id="cryptoVariants" class="crypto-grid">
+                <!-- Cards injected by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ COMPATIBILITY MATRIX ============ -->
+    <section id="compatibility" class="section reveal">
+        <div class="container">
+            <h2 class="section-title">Compatibility <span class="gradient-text">Matrix</span></h2>
+            <p class="section-desc">An interactive heatmap showing which blockchain pairs share the same consensus mechanism (compatible at protocol level) and which do not. Hover over any cell for details.</p>
+            <div class="matrix-wrapper">
+                <div id="compatibilityMatrix" class="matrix-container">
+                    <!-- Table injected by JS -->
+                </div>
+            </div>
+            <div class="matrix-legend">
+                <span class="legend-item"><span class="legend-color compatible"></span> Same consensus (compatible)</span>
+                <span class="legend-item"><span class="legend-color incompatible"></span> Different consensus (incompatible)</span>
+                <span class="legend-item"><span class="legend-color self"></span> Same blockchain</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer id="footer">
+        <div class="container">
+            <p class="footer-text">Consensus Algorithms in Blockchain — A Comparative Explorer</p>
+            <p class="footer-sub">Built for educational purposes · Blockchain Technology Assignment · 2026</p>
+        </div>
+    </footer>
+
+    <!-- Tooltip for compatibility matrix -->
+    <div id="matrixTooltip" class="matrix-tooltip"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
